@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "profiles",
     "registration",
     "django.contrib.admin",
     "django.contrib.auth",
@@ -132,7 +133,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 #auth redirects
 #redirecciona a la pagina home, podemos poner otras paginas
-LOGIN_REDIRECT_URL='pages:pages'
+#LOGIN_REDIRECT_URL='pages:pages'
 LOGOUT_REDIRECT_URL='home'
 
 
@@ -143,3 +144,7 @@ if DEBUG:
 else:
     #Aqui hay que configurar el email real para producción
     pass
+
+#Media files
+MEDIA_URL='/media/'
+MEDIA_ROOT=os.path.join(BASE_DIR,'media')
